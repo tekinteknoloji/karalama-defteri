@@ -67,4 +67,8 @@ Google Authenticator aktarım biçiminin 2. sürümü **v2.1.1** ve sonrasında 
 - **QR okunmuyor:** Sürümü kontrol edin. QR’ın tamamını, kenarları kesilmeden ve parlama olmadan yeniden alın. Birden çok parça varsa diğer parçaları da okutun.
 - **Destek:** Sorunu bildirirken Windows sürümünü, sol alttaki Karalama Defteri sürümünü ve tekrar adımlarını ekleyin. Not içeriği, parola, kurtarma kelimeleri ve gerçek hesap QR’larını paylaşmayın.
 
+
+## Destek ol
+
+Karalama Defteri ücretsiz ve reklamsızdır. Destek gönüllüdür ve tüm kullanıcılar aynı özelliklere erişir. **Hakkında → Destek ol** bölümünden GitHub’da yıldız verebilir, hata veya öneri bildirebilir ve indirme bağlantısını paylaşabilirsiniz. Ödeme düğmeleri bağlantılar yapılandırıldığında görünür.
 Geliştiren **Tekin Teknoloji** · [tekinteknoloji.com](https://tekinteknoloji.com)
