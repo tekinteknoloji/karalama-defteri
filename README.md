@@ -4,6 +4,11 @@
 
 [Son sürümü indir](https://github.com/tekinteknoloji/karalama-defteri/releases/latest) · [Sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases)
 
+## v2.3.0 ve v2.3.1
+
+- **v2.3.0** ile Özellikler, Pano ve Windows hatırlatmaları eklendi. [v2.3.0 sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/v2.3.0)
+- **v2.3.1** ile Ayarlar ve güncelleme penceresi yenilendi, metin seçimi ve Windows Hello akışı düzeltildi. [v2.3.1 sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/v2.3.1)
+
 ## İlk kullanım
 
 1. GitHub Releases sayfasında **Assets** bölümünden **KaralamaDefteri.exe** dosyasını indirin.
@@ -42,19 +47,49 @@ Editörde **Ctrl+F** ile bulabilir, **Ctrl+H** ile değiştirebilir ve **Ctrl+Sh
 
 Tam liste ve Windows genelindeki tuş atamaları **Ayarlar → Kısayollar** bölümündedir.
 
+## Özellikler, Pano ve hatırlatmalar
+
+**Ayarlar → Özellikler** bölümünden Pano, Son tarih ve hatırlatma, Doğrulayıcı, Masaüstüne iğneleme, Etiketler, Kontrol listesi ve Bulut senkronunu yönetebilirsiniz. Bir modülü kapatınca ilgili komutlar gizlenir ve kayıtlı veriler korunur. **Özellik seçimlerimi diğer cihazlarla eşitle** ile tercihlerinizi bağlı kopyalara taşıyabilirsiniz.
+
+### Pano
+
+1. **Ayarlar → Özellikler → Pano (proje takibi)** seçeneğini açın. **Görünüm → Pano** yolunu kullanın veya **Ctrl+K** ile **Pano** komutunu bulun.
+2. Kenar çubuğundan bir grup veya **Tümü** seçeneğini seçin. Başlangıç sütunları **Fikir**, **Yapılacak**, **Yapılıyor** ve **Bitti**. Sütun ekleyebilir, adını ve sırasını değiştirebilirsiniz.
+3. Kartları sütunlar arasında veya aynı sütun içinde sürükleyin. Kart odaktayken **Ctrl+Shift+←/→** sütunu, **Ctrl+Shift+↑/↓** sırayı değiştirir.
+
+### Son tarih ve hatırlatma
+
+Pano açıkken **Ayarlar → Özellikler → Son tarih ve hatırlatma** seçeneğini açın. Kartın sağ tık menüsünden **Son tarih ve hatırlatma…** ile tarih ve saat belirleyin. Windows bildirimi için karttaki bildirim seçeneğini işaretleyin. Uygulama tepside çalışırken de bildirim gelir.
+
+Kart kenarı son 24 saatte sarıya, süre dolunca kırmızıya döner. **Yaklaşanlar** seçeneği veya `tarih:hafta` filtresi bugün dahil yedi günü gösterir. Bugün için `tarih:bugün` yazın.
+
+## Windows Hello
+
+1. **Ayarlar → Güvenlik** üzerinden yerel şifrelemeyi açın. 24 kelimelik kurtarma anahtarını uygulama klasöründen ayrı saklayın.
+2. Windows hesabında Hello kuruluysa **Windows Hello’yu etkinleştir…** seçeneğine tıklayın. Karalama Defteri ana parolanızı girip Windows istemini tamamlayın.
+3. **Şimdi kilitle** ile deneyin. Açılış ekranında **Windows Hello ile aç** seçeneğini kullanın. PIN istenirse yalnızca Windows ekranına girin.
+
+Hello kullanılamadığında veya portable klasörü başka bir bilgisayara taşıdığınızda ana parolayla açabilirsiniz. Yeni bilgisayarda Hello bağlantısını yeniden kurabilirsiniz.
+
+## Senkron
+
+- **Klasör:** İki portable kopyada **Ayarlar → Senkron → Klasör** bölümünden aynı paylaşılan klasörü seçin. Aynı senkron parolasını kullanın. İki cihaz aynı notu değiştirirse diğer düzenleme çakışma kopyasında saklanır.
+- **Google Drive:** **Bulut senkronu** modülünü açık tutun. Google Cloud’dan indirdiğiniz masaüstü OAuth JSON dosyasını `Veri/google-oauth.json` konumuna koyun. **Ayarlar → Senkron → Google Drive ile eşitle…** ile Google izin ekranını tamamlayın. OAuth dosyasını yerelde saklayın.
+- **OneDrive ve iCloud:** OneDrive düğmesi yapılandırılmış OAuth istemcisiyle etkinleşir. iCloud seçeneği bu sürümde pasiftir.
+- **Otomatik eşitleme:** Bulut için **Değişiklik olunca**, **Saatlik** veya **Günde bir** seçilebilir. Yerel şifreleme açıksa bağlantı kurulduktan sonra ayrı senkron parolası sorulmaz. Şifreleme kapalıysa senkron parolası ilk bağlantıda istenir. Eşitleme durumunu sol alttaki göstergeden takip edin.
+
 ## Yedekleme, taşıma ve şifreleme
 
 - **Yedek:** **Ayarlar → Yedek ve aktarım** bölümünden yedek alın veya mevcut bir yedeği geri yükleyin. Resimler de veritabanıyla birlikte saklanır. Aynı bölümden metin notlarını içe aktarabilirsiniz.
 - **Taşıma:** Sistem tepsisinden **Çıkış**’ı seçtikten sonra EXE’yi ve yanındaki **Veri** klasörünü beraber kopyalayın. Yeni konumda EXE’yi açın. Notlar, görseller ve ayarlar `Veri\notes.db` içinde tutulur.
 - **Şifreleme:** **Ayarlar → Güvenlik** bölümünden yerel şifrelemeyi açabilirsiniz. Ana parolayı ve gösterilen 24 kelimelik kurtarma anahtarını uygulama klasöründen ayrı, güvenli bir yerde saklayın.
-- **Senkron:** İki portable kopyada **Ayarlar → Klasör senkronu** bölümünden aynı paylaşılan klasörü ve aynı senkron parolasını kullanın. Google Drive, OneDrive ve iCloud için canlı hesap kabul testleri bekliyor. Windows Hello ile gerçek PIN testi de bekliyor.
 
 ## Doğrulayıcı ve Google Authenticator aktarımı
 
-Doğrulayıcı’yı kullanmak için önce **Ayarlar → Güvenlik** üzerinden yerel şifrelemeyi açın.
+Önce **Ayarlar → Güvenlik** üzerinden yerel şifrelemeyi açın. Ardından **Ayarlar → Özellikler** bölümünden **Doğrulayıcı** modülünü etkinleştirin.
 
 1. Telefonda Google Authenticator’da **Hesapları aktar → Hesapları dışa aktar** bölümünü açıp taşımak istediğiniz hesapları seçin.
-2. Windows’ta kenar çubuğundan **Doğrulayıcı**’yı açın. Aktarım QR görüntüsünü panoya kopyalayın ve **Panodan QR veya bağlantı ekle** düğmesini kullanın. Dosya olarak elinizdeyse pencereye bırakabilirsiniz. Birden çok QR üretilirse hepsini aynı pencerede sırayla okutun.
+2. Windows’ta kenar çubuğundan **Doğrulayıcı**’yı açın. Aktarım QR görüntüsünü panoya kopyalayın ve **QR veya bağlantı ekle** düğmesini kullanın. Dosya olarak elinizdeyse pencereye bırakabilirsiniz. Birden çok QR üretilirse hepsini aynı pencerede sırayla okutun.
 3. Hesap satırındaki koda tıklayıp kopyalayın. **Ctrl+K** paletinde `kod: hesap-adı` ile de bulabilirsiniz. TOTP kodunu telefondaki kodla aynı zaman diliminde karşılaştırın.
 
 Google Authenticator aktarım biçiminin 2. sürümü **v2.1.1** ve sonrasında desteklenir. Doğrulayıcı ayrıca tek hesap için `otpauth://` bağlantısını ve elle TOTP/HOTP girişini destekler. Aktarım QR’ı hesapların gizli anahtarlarını içerir. Gerçek hesaplara ait QR’ları paylaşmayın.
@@ -67,6 +102,24 @@ Google Authenticator aktarım biçiminin 2. sürümü **v2.1.1** ve sonrasında 
 - **QR okunmuyor:** Sürümü kontrol edin. QR’ın tamamını, kenarları kesilmeden ve parlama olmadan yeniden alın. Birden çok parça varsa diğer parçaları da okutun.
 - **Destek:** Sorunu bildirirken Windows sürümünü, sol alttaki Karalama Defteri sürümünü ve tekrar adımlarını ekleyin. Not içeriği, parola, kurtarma kelimeleri ve gerçek hesap QR’larını paylaşmayın.
 
+
+## Derleme ve yayın
+
+Windows’ta .NET 8 SDK ile proje kökünden çalıştırın.
+
+```powershell
+dotnet build
+dotnet test
+dotnet publish src/KaralamaDefteri -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o dist/win-x64
+```
+
+## GitHub Releases için güncelleme paketi
+
+Google Drive canlı denemesi için Google Cloud masaüstü OAuth dosyasını yerelde `secrets/google-oauth.json` olarak saklayın. `Publish-Release.ps1 -GoogleOAuthTest` istemci kimliğini deneme EXE’sine ekler. Deneme sürecini başlatırken istemci sırrını aynı dosyadan `KARALAMA_GOOGLE_DESKTOP_SECRET` ortam değişkenine yükleyin. İstemci sırrı derleme çıktısına eklenmez. [Gizlilik politikası](https://tekinteknoloji.github.io/karalama-defteri/PRIVACY.html)
+
+`Publish-Release.ps1` EXE, `SHA256SUMS` ve `latest.json` üretir. `-AssetUrl` ile EXE'nin sürüme özel HTTPS indirme adresini, `-Notes` ile sürüm notlarını ve gerekirse `-MinVersion` ile güncellenebilecek en eski sürümü verin. Kararlı sürümün üç dosyasını GitHub'daki kararlı sürüme ekleyin. Beta için dosyaları sürüme özel ön sürüme ekleyin ve `beta` etiketli ön sürümün `latest.json` dosyasını güncelleyin. Manifestteki EXE adresi sürüme özel kalır.
+
+İmzalama için isteğe bağlı `-SignerScript` parametresine EXE yolunu ilk argüman olarak alan PowerShell betiğini verin. Betik geçerli Authenticode imzasını doğruladıktan sonra SHA-256 üretir. `-SignerThumbprint` ile sonraki güncellemelerde beklenen imzalayan sertifika belirtilebilir.
 
 ## Destek ol
 
