@@ -74,7 +74,7 @@ Hello kullanılamadığında veya portable klasörü başka bir bilgisayara taş
 ## Senkron
 
 - **Klasör:** İki portable kopyada **Ayarlar → Senkron → Klasör** bölümünden aynı paylaşılan klasörü seçin. Aynı senkron parolasını kullanın. İki cihaz aynı notu değiştirirse diğer düzenleme çakışma kopyasında saklanır.
-- **Google Drive:** **Bulut senkronu** modülünü açık tutun. Google Cloud’dan indirdiğiniz masaüstü OAuth JSON dosyasını `Veri/google-oauth.json` konumuna koyun. **Ayarlar → Senkron → Google Drive ile eşitle…** ile Google izin ekranını tamamlayın. OAuth dosyasını yerelde saklayın.
+- **Google Drive:** Bulut senkronu modülünü açık tutun. Gömülü Google masaüstü istemcisiyle hazırlanan pakette **Ayarlar → Senkron → Google Drive ile eşitle…** seçeneğini açıp Google izin ekranını tamamlayın. Kendi istemcinizi kullanmak için masaüstü OAuth dosyanızı `Veri/google-oauth.json` konumuna koyabilirsiniz.
 - **OneDrive ve iCloud:** OneDrive düğmesi yapılandırılmış OAuth istemcisiyle etkinleşir. iCloud seçeneği bu sürümde pasiftir.
 - **Otomatik eşitleme:** Bulut için **Değişiklik olunca**, **Saatlik** veya **Günde bir** seçilebilir. Yerel şifreleme açıksa bağlantı kurulduktan sonra ayrı senkron parolası sorulmaz. Şifreleme kapalıysa senkron parolası ilk bağlantıda istenir. Eşitleme durumunu sol alttaki göstergeden takip edin.
 
@@ -115,7 +115,7 @@ dotnet publish src/KaralamaDefteri -c Release -r win-x64 --self-contained true -
 
 ## GitHub Releases için güncelleme paketi
 
-Google Drive canlı denemesi için Google Cloud masaüstü OAuth dosyasını yerelde `secrets/google-oauth.json` olarak saklayın. `Publish-Release.ps1 -GoogleOAuthTest` istemci kimliğini deneme EXE’sine ekler. Deneme sürecini başlatırken istemci sırrını aynı dosyadan `KARALAMA_GOOGLE_DESKTOP_SECRET` ortam değişkenine yükleyin. İstemci sırrı derleme çıktısına eklenmez. [Gizlilik politikası](https://tekinteknoloji.github.io/karalama-defteri/PRIVACY.html)
+Google Drive destekli paket için Google Cloud masaüstü OAuth dosyasını derleme makinesinde `secrets/google-oauth.json` olarak saklayın. `Publish-Release.ps1` bu dosya varsa masaüstü yapılandırmasını EXE içine ekler. Son kullanıcı Google izin ekranıyla bağlanır. OAuth dosyasını ve derleme ara çıktılarını kaynak depoya eklemeyin. [Uygulama ana sayfası](https://tekinteknoloji.com/karalama-defteri/) · [Gizlilik politikası](https://tekinteknoloji.com/karalama-defteri/gizlilik/)
 
 `Publish-Release.ps1` EXE, `SHA256SUMS` ve `latest.json` üretir. `-AssetUrl` ile EXE'nin sürüme özel HTTPS indirme adresini, `-Notes` ile sürüm notlarını ve gerekirse `-MinVersion` ile güncellenebilecek en eski sürümü verin. Kararlı sürümün üç dosyasını GitHub'daki kararlı sürüme ekleyin. Beta için dosyaları sürüme özel ön sürüme ekleyin ve `beta` etiketli ön sürümün `latest.json` dosyasını güncelleyin. Manifestteki EXE adresi sürüme özel kalır.
 

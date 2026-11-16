@@ -21,3 +21,5 @@ The Google Drive connection requests access only to the application's `appDataFo
 Tekin Teknoloji does not collect personal data through the application. The application has no telemetry or advertising. Update checks make a network request to GitHub. External services you open have their own privacy policies.
 
 To remove local copies, delete the application data and any backups you made. You can revoke cloud access in your provider's account settings and remove application data using the controls offered by that provider. For questions, contact [Tekin Teknoloji](https://tekinteknoloji.com).
+
+[Uygulama ana sayfası / App homepage](https://tekinteknoloji.com/karalama-defteri/) · [Gizlilik politikası / Privacy policy](https://tekinteknoloji.com/karalama-defteri/gizlilik/)
