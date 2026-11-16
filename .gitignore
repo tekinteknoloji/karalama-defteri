@@ -1,0 +1,15 @@
+.sdk/
+.nuget/
+bin/
+obj/
+dist/
+*.db*
+
+
+# Gizli anahtarlar - asla GitHub a gonderilmez
+secrets/
+google-oauth.json
+client_secret_*.json
+*.keystore
+*.jks
+*.p12

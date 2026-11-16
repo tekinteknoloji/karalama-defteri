@@ -1,8 +1,20 @@
 # Karalama Defteri
 
-**Windows için Türkçe, taşınabilir not defteri.** Müşteri ve proje notlarını firmalara göre ayırın, ekran görüntülerini notların içine ekleyin ve aradığınızı Ctrl+K ile bulun. Yazdıklarınız otomatik kaydedilir.
+**Windows ve Android için Türkçe not defteri.** Müşteri ve proje notlarını firmalara göre ayırın, notlara ekran görüntüsü ekleyin ve aradığınızı arama kutusundan bulun. Yazdıklarınız otomatik kaydedilir. Windows sürümü klasörüyle birlikte taşınabilir.
 
-[Son sürümü indir](https://github.com/tekinteknoloji/karalama-defteri/releases/latest) · [Sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases)
+[Windows sürümünü indir](https://github.com/tekinteknoloji/karalama-defteri/releases/latest) · [Android APK](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/android-v0.5.0) · [Sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases)
+
+## Android
+
+1. Android sürümünün **Assets** bölümünden **KaralamaDefteri-Android.apk** dosyasını indirip açın. Android isterse APK’yı açan kaynağa kurulum izni verin. Yayın APK’sı Android 6 ve üzerini hedefler.
+2. **Yeni not** ile yazmaya başlayın. **Gruplar** çekmecesinden firma seçebilir ve aramada `@grup` filtresini kullanabilirsiniz. Notlara dosya seçiciden, kameradan veya Android paylaşım menüsünden resim ekleyebilirsiniz.
+3. **⋯ → Ayarlar → Özellikler** üzerinden Pano veya Doğrulayıcı’yı açın. Doğrulayıcı için önce **Güvenlik → Şifrelemeyi aç** ile ana parola belirleyin. Android 11 ve üzerinde cihaz ekran kilidiyle biyometrik kilidi de etkinleştirebilirsiniz. Şifreli veritabanı uygulama yeniden başlatıldığında ana parola ister.
+4. **Ayarlar → Hızlı not widget’ı** ile ana ekrana bir kısayol ekleyebilir veya uygulama simgesine uzun basıp **Yeni not** seçebilirsiniz.
+5. Yeni sürüm için **Ayarlar → Güncellemeler → Şimdi kontrol et** yolunu kullanın. APK’nın boyutu, SHA-256 özeti ve imza uyumu doğrulanır. **Kur** düğmesi Android’in kurulum onayını açar. Android isterse Karalama Defteri’ne bu kaynaktan kurulum izni verip **Kur**’a yeniden dokunun.
+
+Android ve Windows güncellemeleri ayrı sürüm etiketleri kullanır. Android yayın APK’sı, önceki debug imzalı Android deneme APK’larının üzerine kurulamaz. Deneme APK’sını kaldırmak telefondaki uygulama verilerini siler.
+
+**Google Drive:** Android ile Windows aynı Google Cloud projesindeki istemcileri ve aynı Drive alanını kullanır. İki yönlü kontrollü not ve resim testi geçti. Android yayın sertifikasıyla canlı Drive kabulü bekliyor.
 
 ## v2.3.0 ve v2.3.1
 
@@ -108,10 +120,12 @@ Google Authenticator aktarım biçiminin 2. sürümü **v2.1.1** ve sonrasında 
 Windows’ta .NET 8 SDK ile proje kökünden çalıştırın.
 
 ```powershell
-dotnet build
-dotnet test
+dotnet build src/KaralamaDefteri/KaralamaDefteri.csproj
+dotnet test tests/KaralamaDefteri.Tests/KaralamaDefteri.Tests.csproj
 dotnet publish src/KaralamaDefteri -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o dist/win-x64
 ```
+
+Android için proje içindeki .NET 8 MAUI Android iş yükü, Android SDK ve JDK 17 ile `./Publish-Android.ps1` çalıştırın. Sonraki APK’ları aynı yayın anahtarıyla imzalayın. Yayın anahtarı ile Windows hesabına bağlı şifreli parola kaydı yerel `secrets` klasöründedir.
 
 ## GitHub Releases için güncelleme paketi
 
