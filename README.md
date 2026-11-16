@@ -2,7 +2,7 @@
 
 **Windows ve Android için Türkçe not defteri.** Müşteri ve proje notlarını firmalara göre ayırın, notlara ekran görüntüsü ekleyin ve aradığınızı arama kutusundan bulun. Yazdıklarınız otomatik kaydedilir. Windows sürümü klasörüyle birlikte taşınabilir.
 
-[Windows sürümünü indir](https://github.com/tekinteknoloji/karalama-defteri/releases/latest) · [Android APK](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/android-v0.5.0) · [Sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases)
+[Windows sürümünü indir](https://github.com/tekinteknoloji/karalama-defteri/releases/latest) · [Android 0.5.1 APK](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/android-v0.5.1) · [Sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases)
 
 ## Android
 
@@ -11,6 +11,8 @@
 3. **⋯ → Ayarlar → Özellikler** üzerinden Pano veya Doğrulayıcı’yı açın. Doğrulayıcı için önce **Güvenlik → Şifrelemeyi aç** ile ana parola belirleyin. Android 11 ve üzerinde cihaz ekran kilidiyle biyometrik kilidi de etkinleştirebilirsiniz. Şifreli veritabanı uygulama yeniden başlatıldığında ana parola ister.
 4. **Ayarlar → Hızlı not widget’ı** ile ana ekrana bir kısayol ekleyebilir veya uygulama simgesine uzun basıp **Yeni not** seçebilirsiniz.
 5. Yeni sürüm için **Ayarlar → Güncellemeler → Şimdi kontrol et** yolunu kullanın. APK’nın boyutu, SHA-256 özeti ve imza uyumu doğrulanır. **Kur** düğmesi Android’in kurulum onayını açar. Android isterse Karalama Defteri’ne bu kaynaktan kurulum izni verip **Kur**’a yeniden dokunun.
+
+**Android 0.5.1:** Arama tam genişlikte. Sol üstteki grup simgesi çekmeceyi açıyor. Not bulunan görünümde sağ alttaki **+**, boş grupta ise ortadaki **Yeni not** düğmesi düzenleyiciyi açıyor. Kartlar ekran genişliğine göre iki, üç veya dört sütuna yerleşiyor.
 
 Android ve Windows güncellemeleri ayrı sürüm etiketleri kullanır. Android yayın APK’sı, önceki debug imzalı Android deneme APK’larının üzerine kurulamaz. Deneme APK’sını kaldırmak telefondaki uygulama verilerini siler.
 

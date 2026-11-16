@@ -1,5 +1,11 @@
 # Karalama Defteri değişiklik günlüğü
 
+## Android 0.5.1 — 17.11.2026
+
+- Tam genişlikte arama, sol üstten açılan grup çekmecesi ve sağ altta yüzen yeni not düğmesi.
+- Boş grupta tek yeni not düğmesi. Kartlarda sağ üstte sabitleme ve renk işaretleri.
+- Ekran genişliğine göre iki, üç veya dört sütun. Durum ve gezinme çubukları uygulama temasına bağlı.
+
 ## Android 0.5.0 — 17.11.2026
 
 - Android yayın sertifikasıyla imzalanan ilk APK.
