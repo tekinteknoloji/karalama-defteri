@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{72EE9970-6CD1-4C83-B79A-6F2EB2A5D558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaralamaDefteri", "src\KaralamaDefteri\KaralamaDefteri.csproj", "{EB2341AC-B3CD-41E7-8605-FACE250A555E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{368C9316-90D2-4E04-B9CA-D0677E167DE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaralamaDefteri.Tests", "tests\KaralamaDefteri.Tests\KaralamaDefteri.Tests.csproj", "{2B675411-390E-4E65-AC80-B7E398FBD1F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaralamaDefteri.Core", "src\KaralamaDefteri.Core\KaralamaDefteri.Core.csproj", "{D06A3C66-FEEC-41CE-97CC-0F30E8B4FEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaralamaDefteri.Mobile", "src\KaralamaDefteri.Mobile\KaralamaDefteri.Mobile.csproj", "{A0619518-87F3-4FD0-BC59-2B1F6B0C8ADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB2341AC-B3CD-41E7-8605-FACE250A555E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2341AC-B3CD-41E7-8605-FACE250A555E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2341AC-B3CD-41E7-8605-FACE250A555E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2341AC-B3CD-41E7-8605-FACE250A555E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B675411-390E-4E65-AC80-B7E398FBD1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B675411-390E-4E65-AC80-B7E398FBD1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B675411-390E-4E65-AC80-B7E398FBD1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B675411-390E-4E65-AC80-B7E398FBD1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06A3C66-FEEC-41CE-97CC-0F30E8B4FEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06A3C66-FEEC-41CE-97CC-0F30E8B4FEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06A3C66-FEEC-41CE-97CC-0F30E8B4FEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06A3C66-FEEC-41CE-97CC-0F30E8B4FEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0619518-87F3-4FD0-BC59-2B1F6B0C8ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0619518-87F3-4FD0-BC59-2B1F6B0C8ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0619518-87F3-4FD0-BC59-2B1F6B0C8ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0619518-87F3-4FD0-BC59-2B1F6B0C8ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB2341AC-B3CD-41E7-8605-FACE250A555E} = {72EE9970-6CD1-4C83-B79A-6F2EB2A5D558}
+		{2B675411-390E-4E65-AC80-B7E398FBD1F7} = {368C9316-90D2-4E04-B9CA-D0677E167DE7}
+		{D06A3C66-FEEC-41CE-97CC-0F30E8B4FEBB} = {72EE9970-6CD1-4C83-B79A-6F2EB2A5D558}
+		{A0619518-87F3-4FD0-BC59-2B1F6B0C8ADE} = {72EE9970-6CD1-4C83-B79A-6F2EB2A5D558}
+	EndGlobalSection
+EndGlobal

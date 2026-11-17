@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationTitle>Karalama Defteri</ApplicationTitle>
+    <ApplicationId>com.tekinteknoloji.karalamadefteri</ApplicationId>
+    <ApplicationDisplayVersion>0.5.10</ApplicationDisplayVersion>
+    <ApplicationVersion>68</ApplicationVersion>
+    <SupportedOSPlatformVersion>23.0</SupportedOSPlatformVersion>
+    <AndroidPackageFormats>apk</AndroidPackageFormats>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <LocalSdkRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../.sdk'))</LocalSdkRoot>
+    <AndroidSdkDirectory Condition="'$(AndroidSdkDirectory)' == '' And Exists('$(LocalSdkRoot)/android-sdk')">$(LocalSdkRoot)/android-sdk</AndroidSdkDirectory>
+    <JavaSdkDirectory Condition="'$(JavaSdkDirectory)' == '' And Exists('$(LocalSdkRoot)/java17-compatible')">$(LocalSdkRoot)/java17-compatible</JavaSdkDirectory>
+    <AppSettingsDirectory>$(LocalSdkRoot)/android-settings</AppSettingsDirectory>
+    <XamarinBuildDownloadDir>$(LocalSdkRoot)/android-maven</XamarinBuildDownloadDir>
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <PublishTrimmed>false</PublishTrimmed>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AndroidUpdateQaSource)" Condition="'$(AndroidUpdateQaSource)' != ''" />
+    <ProjectReference Include="../KaralamaDefteri.Core/KaralamaDefteri.Core.csproj" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="ZXing.Net" Version="0.16.11" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.2.0.3" />
+    <!-- Align KTX shims with the AndroidX libraries pulled in by Google Play services. -->
+    <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.3.1" />
+    <PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.8.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx" Version="2.8.7.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx" Version="2.8.7.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" Version="2.8.7.1" />
+    <!-- The package's managed target groups start at .NET 9. Use its matching native binaries with Core's SkiaSharp. -->
+    <PackageDownload Include="SkiaSharp.NativeAssets.Android" Version="[3.119.4]" />
+    <AndroidNativeLibrary Include="$(NuGetPackageRoot)/skiasharp.nativeassets.android/3.119.4/runtimes/android-arm/native/libSkiaSharp.so" Link="lib/armeabi-v7a/libSkiaSharp.so" />
+    <AndroidNativeLibrary Include="$(NuGetPackageRoot)/skiasharp.nativeassets.android/3.119.4/runtimes/android-arm64/native/libSkiaSharp.so" Link="lib/arm64-v8a/libSkiaSharp.so" />
+    <AndroidNativeLibrary Include="$(NuGetPackageRoot)/skiasharp.nativeassets.android/3.119.4/runtimes/android-x86/native/libSkiaSharp.so" Link="lib/x86/libSkiaSharp.so" />
+    <AndroidNativeLibrary Include="$(NuGetPackageRoot)/skiasharp.nativeassets.android/3.119.4/runtimes/android-x64/native/libSkiaSharp.so" Link="lib/x86_64/libSkiaSharp.so" />
+    <MauiIcon Include="../KaralamaDefteri/Resources/tekin-apple-touch-icon.png" Link="Resources/AppIcon/appicon.png" />
+  </ItemGroup>
+</Project>

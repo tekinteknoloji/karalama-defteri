@@ -1,0 +1,13 @@
+Karalama Defteri
+================
+
+KaralamaDefteri.exe dosyasına çift tıklayın. Notlar ve ayarlar exe'nin
+yanındaki Veri klasöründe otomatik kaydedilir.
+
+Başka bir bilgisayara veya USB belleğe taşımak için önce sistem tepsisinden
+Çıkış'ı seçin. Ardından exe ve Veri klasörü dahil klasörün tamamını kopyalayın.
+Yeni konumda exe'ye çift tıklayın.
+
+Windows ile başlat seçeneği varsayılan olarak kapalıdır.
+
+Tekin Teknoloji — https://tekinteknoloji.com

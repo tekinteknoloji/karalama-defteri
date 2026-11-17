@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <DebugType>embedded</DebugType>
+    <AssemblyName>KaralamaDefteri</AssemblyName>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <Version>2.6.0</Version>
+    <StableUpdateFeed Condition="'$(StableUpdateFeed)' == ''">https://github.com/tekinteknoloji/karalama-defteri/releases/latest/download/latest.json</StableUpdateFeed>
+    <BetaUpdateFeed Condition="'$(BetaUpdateFeed)' == ''">https://github.com/tekinteknoloji/karalama-defteri/releases/download/beta/latest.json</BetaUpdateFeed>
+    <ApplicationIcon>Resources/app.ico</ApplicationIcon>
+    <Company>Tekin Teknoloji</Company>
+    <Product>Karalama Defteri</Product>
+    <Copyright>© 2026 Tekin Teknoloji</Copyright>
+    <Authors>Tekin Teknoloji</Authors>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="StableUpdateFeed" Value="$(StableUpdateFeed)" Condition="'$(StableUpdateFeed)' != ''" />
+    <AssemblyMetadata Include="BetaUpdateFeed" Value="$(BetaUpdateFeed)" Condition="'$(BetaUpdateFeed)' != ''" />
+    <AssemblyMetadata Include="UpdateSignerThumbprint" Value="$(UpdateSignerThumbprint)" Condition="'$(UpdateSignerThumbprint)' != ''" />
+    <AssemblyMetadata Include="SupportPaymentHost" Value="$(SupportPaymentHost)" Condition="'$(SupportPaymentHost)' != ''" />
+    <AssemblyMetadata Include="GoogleOAuthClientId" Value="$(GoogleOAuthClientId)" Condition="'$(GoogleOAuthClientId)' != ''" />
+    <EmbeddedResource Include="../../secrets/google-oauth.json" LogicalName="KaralamaDefteri.GoogleDesktopOAuth.json"
+                      Condition="'$(EmbedGoogleOAuth)' == 'true'" />
+    <AssemblyMetadata Include="OneDriveOAuthClientId" Value="$(OneDriveOAuthClientId)" Condition="'$(OneDriveOAuthClientId)' != ''" />
+    <AssemblyMetadata Include="BuildTimeUtc" Value="$([System.DateTime]::UtcNow.ToString('O'))" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+    <PackageReference Include="ZXing.Net" Version="0.16.11" />
+    <Resource Include="Resources/app.ico" />
+    <InternalsVisibleTo Include="KaralamaDefteri.Tests" />
+    <PackageReference Include="AvalonEdit" Version="6.3.1.120" />
+    <ProjectReference Include="../KaralamaDefteri.Core/KaralamaDefteri.Core.csproj" />
+  </ItemGroup>
+</Project>

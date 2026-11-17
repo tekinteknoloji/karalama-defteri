@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <SolidColorBrush x:Key="WindowBrush" Color="#262624"/>
+  <SolidColorBrush x:Key="BarBrush" Color="#1F1E1D"/>
+  <SolidColorBrush x:Key="SurfaceBrush" Color="#30302E"/>
+  <SolidColorBrush x:Key="BorderBrush" Color="#45443F"/>
+  <SolidColorBrush x:Key="InkBrush" Color="#F5F4ED"/>
+  <SolidColorBrush x:Key="MutedBrush" Color="#A8A69C"/>
+  <SolidColorBrush x:Key="AccentBrush" Color="#D97757"/>
+  <SolidColorBrush x:Key="AccentHoverBrush" Color="#E08A6D"/>
+  <SolidColorBrush x:Key="AccentInkBrush" Color="#1F1E1D"/>
+  <SolidColorBrush x:Key="PrimaryBrush" Color="#D97757"/>
+  <SolidColorBrush x:Key="PrimaryHoverBrush" Color="#E08A6D"/>
+  <SolidColorBrush x:Key="LinkBrush" Color="#E08A6D"/>
+  <SolidColorBrush x:Key="HoverBrush" Color="#3A3936"/>
+  <SolidColorBrush x:Key="SelectedBrush" Color="#4A3A33"/>
+  <SolidColorBrush x:Key="SelectionBrush" Color="#5A4036"/>
+  <SolidColorBrush x:Key="MatchBrush" Color="#7A5C1E"/>
+  <SolidColorBrush x:Key="WarningBrush" Color="#4A2523"/>
+  <SolidColorBrush x:Key="WarningInkBrush" Color="#F2B8B5"/>
+  <SolidColorBrush x:Key="YellowBrush" Color="#4A4225"/>
+  <SolidColorBrush x:Key="GreenBrush" Color="#23463D"/>
+  <SolidColorBrush x:Key="BlueBrush" Color="#293F56"/>
+  <SolidColorBrush x:Key="PinkBrush" Color="#543547"/>
+  <SolidColorBrush x:Key="DeadlineSoonBrush" Color="#E9BD49"/>
+  <SolidColorBrush x:Key="DeadlineOverdueBrush" Color="#FF8683"/>
+</ResourceDictionary>

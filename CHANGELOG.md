@@ -1,5 +1,59 @@
 # Karalama Defteri değişiklik günlüğü
 
+## Android 0.6.0 adayı — 18.11.2026
+
+- Doğrulayıcı, kamera önizlemesinde QR kodunu fotoğraf çekmeden tarar.
+- Google Authenticator aktarım biçimindeki QR’lar içe alınabilir. Seçili TOTP hesapları, ana parola doğrulamasından sonra bir veya daha fazla QR olarak dışa aktarılabilir.
+- Z Fold’da canlı tarama ve dışa aktarım QR’ının oluşması doğrulandı. Google Authenticator’da içe aktarma ve Windows ile kod eşleşmesi bekliyor.
+
+## Windows 2.6.0 adayı — 18.11.2026
+
+- Doğrulayıcı hesapları hizmet, hesap, grup, kod ve süre sütunlarıyla gösterilir.
+- Hesap ekleme, arama, düzenleme, kaldırma ve kod işlemleri için pencere içi kısayollar eklendi.
+
+## Windows 2.5.1 — 18.11.2026
+
+- Etiketler, renk filtresi ve Kart/Liste geçişi üst çubukta. Not araması geniş pencerelerde 480 birimle sınırlı.
+
+## Android 0.5.10 — 18.11.2026
+
+- Katlı ve açık ekrana uyarlanan arama ve filtre düzeni, aramalı etiketler ve tek satırlık küçük etiket düğmeleri.
+- Doğrulayıcı’da kamera fotoğrafından TOTP QR aktarımı.
+- Alt gruplar okla açılıp kapanır ve Windows ile eşitlenir.
+
+## Windows 2.5.0 — 18.11.2026
+
+- Açık not yokken kartlar çalışma alanının tamamını kullanır. Not açılınca editör yeniden görünür.
+- Sol menüdeki Etiketler satırı, arama ve hızlı filtreleme için ayrı bir panel açar.
+- Windows 2.4.x günlük sürümlerindeki alt grup ağacı, ana parola değiştirme ve kayıt yeniden deneme düzeltmelerini içerir.
+
+## Android 0.5.5 — 17.11.2026
+
+- Ana parola değiştirilebilir ve tek karakter olabilir. Biyometrik kilit yeni açılışta devreye girer.
+- Bağlı Google hesabı görünür. Çöp kutusu boşaltılabilir ve grup işlemleri uzun basma menüsünden açılır.
+- Grup görünümünden geri hareketi ana not listesine döner.
+
+## Android 0.5.4 — 17.11.2026
+
+- Kart ve liste görünümü, renk filtresi ve not başlığının yanında grup seçimi.
+- Mobil editörde etiket ekleme ve kaldırma ile etkileşimli kontrol listesi.
+- Harf duyarlılığı, tam kelime ve regex seçenekleriyle bul/değiştir.
+
+## Windows 2.3.4 — 17.11.2026
+
+- Ayarlar → Senkron, bağlı Google hesabının e-posta adresini ve kullanılan Drive alanını gösterir.
+
+## Android 0.5.3 — 17.11.2026
+
+- Kamera fotoğrafları JPEG olarak hazırlanır. Resim görüntüleyici mevcut ekleri Android’de açılacak biçimde hazırlar.
+- Not kartına uzun basınca gruba taşıma, renk, sabitleme, arşiv ve çöp kutusu işlemleri açılır.
+- Google Drive ekranında Windows ile aynı Drive alanının nasıl seçileceği açıklanır.
+
+## Android 0.5.2 — 17.11.2026
+
+- Google Drive için hesap seçme ve değiştirme eklendi.
+- Android Drive istekleri düzeltildi. Windows ve Samsung arasında Standart alanda iki yönlü not ve resim eşitlemesi doğrulandı.
+
 ## Android 0.5.1 — 17.11.2026
 
 - Tam genişlikte arama, sol üstten açılan grup çekmecesi ve sağ altta yüzen yeni not düğmesi.

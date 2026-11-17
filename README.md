@@ -2,7 +2,21 @@
 
 **Windows ve Android için Türkçe not defteri.** Müşteri ve proje notlarını firmalara göre ayırın, notlara ekran görüntüsü ekleyin ve aradığınızı arama kutusundan bulun. Yazdıklarınız otomatik kaydedilir. Windows sürümü klasörüyle birlikte taşınabilir.
 
-[Windows sürümünü indir](https://github.com/tekinteknoloji/karalama-defteri/releases/latest) · [Android 0.5.1 APK](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/android-v0.5.1) · [Sürüm notları](https://github.com/tekinteknoloji/karalama-defteri/releases)
+[Windows 2.5.1 EXE](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/v2.5.1) · [Android 0.5.10 APK](https://github.com/tekinteknoloji/karalama-defteri/releases/tag/android-v0.5.10) · [Tüm sürümler](https://github.com/tekinteknoloji/karalama-defteri/releases)
+
+Bu kılavuz yayımlanmış paketleri ve kaynak kodundaki Windows 2.6.0 ile Android 0.6.0 değişikliklerini kapsar. Adaya özel adımlar aşağıda sürüm numarasıyla belirtilmiştir.
+
+## Kılavuz
+
+- [Android kurulumu ve günlük kullanım](#android)
+- [Windows kurulumu](#ilk-kullanım)
+- [Notlar, gruplar ve arama](#notlar-gruplar-ve-arama)
+- [Pano ve hatırlatmalar](#özellikler-pano-ve-hatırlatmalar)
+- [Windows Hello](#windows-hello)
+- [Senkron](#senkron)
+- [Yedekleme, taşıma ve şifreleme](#yedekleme-taşıma-ve-şifreleme)
+- [Doğrulayıcı ve Google Authenticator aktarımı](#doğrulayıcı-ve-google-authenticator-aktarımı)
+- [Güncelleme ve sorun giderme](#güncelleme-ve-sorun-giderme)
 
 ## Android
 
@@ -12,11 +26,17 @@
 4. **Ayarlar → Hızlı not widget’ı** ile ana ekrana bir kısayol ekleyebilir veya uygulama simgesine uzun basıp **Yeni not** seçebilirsiniz.
 5. Yeni sürüm için **Ayarlar → Güncellemeler → Şimdi kontrol et** yolunu kullanın. APK’nın boyutu, SHA-256 özeti ve imza uyumu doğrulanır. **Kur** düğmesi Android’in kurulum onayını açar. Android isterse Karalama Defteri’ne bu kaynaktan kurulum izni verip **Kur**’a yeniden dokunun.
 
-**Android 0.5.1:** Arama tam genişlikte. Sol üstteki grup simgesi çekmeceyi açıyor. Not bulunan görünümde sağ alttaki **+**, boş grupta ise ortadaki **Yeni not** düğmesi düzenleyiciyi açıyor. Kartlar ekran genişliğine göre iki, üç veya dört sütuna yerleşiyor.
+**Android 0.5.10:** Sol üstteki grup simgesi çekmeceyi açar. Sağ alttaki **+** ile seçili gruba not ekleyebilirsiniz. Üst çubukta arama, **Etiketler**, renk ve **Kart/Liste** seçenekleri bulunur. Katlanabilir cihazlarda dar ekranda filtreler ikinci satıra geçer. **Etiketler** düğmesinden bir etiket seçin, seçili etiketi **×** ile temizleyin.
+
+- Kartı açıp düzenleyin. Uygulama değişiklikleri otomatik kaydeder. Editörde etiketleri düzenleyebilir, kontrol listesi öğelerini işaretleyebilir ve metin bulup değiştirebilirsiniz.
+- Karta uzun basarak **Gruba taşı** ve **Sil** gibi işlemlere erişin. Bir gruba uzun basarak alt grup oluşturun. Grup okları alt dalları açar ve kapatır.
+- **Resim ekle** ile galeriden seçin veya kameradan çekin. Eklenen görselleri notun **Resimler** bölümünden açın.
+- **Ayarlar → Güvenlik → Ana parolayı değiştir** bölümünde mevcut parolayı ve yeni parolayı iki kez girin. Biyometri etkinse Android doğrulama isteyebilir. Açık oturumda uygulamadan kısa süre ayrılıp dönmek tekrar parmak izi istemez.
+- **Çöp kutusunu boşalt** bütün çöp kutusunu ekleriyle birlikte kalıcı olarak temizler. Tek bir notu kurtarmak için önce kart menüsündeki geri yükleme seçeneğini kullanın.
 
 Android ve Windows güncellemeleri ayrı sürüm etiketleri kullanır. Android yayın APK’sı, önceki debug imzalı Android deneme APK’larının üzerine kurulamaz. Deneme APK’sını kaldırmak telefondaki uygulama verilerini siler.
 
-**Google Drive:** Android ile Windows aynı Google Cloud projesindeki istemcileri ve aynı Drive alanını kullanır. İki yönlü kontrollü not ve resim testi geçti. Android yayın sertifikasıyla canlı Drive kabulü bekliyor.
+**Google Drive:** Samsung ile Windows arasında not ve resim aktarımı iki yönde doğrulandı. Kurulum için [Senkron](#senkron) bölümüne bakın.
 
 ## v2.3.0 ve v2.3.1
 
@@ -40,6 +60,9 @@ Android ve Windows güncellemeleri ayrı sürüm etiketleri kullanır. Android y
 | Not, grup veya komut bulmak | **Ctrl+K** paletini açın. Yalnızca komutları aramak için sorguya `>` ile başlayın. |
 | Görünümü düzenlemek | Kart menüsünden bir notu sabitleyin, arşivleyin veya masaüstüne iğneleyin. Silinen notlar **Çöp kutusu** bölümünden geri alınabilir. |
 | Yapılacaklar listesi oluşturmak | Not menüsünde **Listeye çevir** seçeneğini kullanın. |
+| Alt grup oluşturmak | Windows’ta gruba sağ tıklayın, Android’de uzun basın ve **Alt grup oluştur** seçeneğini kullanın. Grup okları alt grupları açıp kapatır. |
+| Kartların alanını büyütmek | Windows’ta son not sekmesini kapatın. Kartlar editör alanını da kullanır. Üst çubuktaki **Liste/Kartlar** düğmesi görünümü değiştirir. |
+| Etiketleri hızlı süzmek | Üst çubukta **Etiketler**’i açın, adını arayıp seçin. Örneğin yalnızca VPN notları için `#vpn` etiketini seçebilirsiniz. |
 
 ### Ekran görüntüsü ve editör
 
@@ -92,6 +115,16 @@ Hello kullanılamadığında veya portable klasörü başka bir bilgisayara taş
 - **OneDrive ve iCloud:** OneDrive düğmesi yapılandırılmış OAuth istemcisiyle etkinleşir. iCloud seçeneği bu sürümde pasiftir.
 - **Otomatik eşitleme:** Bulut için **Değişiklik olunca**, **Saatlik** veya **Günde bir** seçilebilir. Yerel şifreleme açıksa bağlantı kurulduktan sonra ayrı senkron parolası sorulmaz. Şifreleme kapalıysa senkron parolası ilk bağlantıda istenir. Eşitleme durumunu sol alttaki göstergeden takip edin.
 
+### Windows ve Android’i aynı Drive alanına bağlama
+
+1. Windows’ta **Ayarlar → Senkron** bölümünü açın. Bağlı Google hesabını ve yanında yazan Drive alanını kontrol edin.
+2. Android’de Google Drive ayarını açın. **Google hesabını değiştir…** ile Windows’ta gösterilen hesabı seçin.
+3. Windows’taki alanı seçin. **Standart** ve **Ayrı günlük alan**, aynı Google hesabında bağımsız iki not alanıdır. Örneğin Windows **Standart** kullanıyorsa telefon da **Standart** seçmelidir.
+4. O alan ilk kurulurken kullanılan **senkron parolasını** girin. Ana parola her cihazın kendi veritabanını açar ve cihazlar arasında farklı olabilir. Senkron parolası aynı Drive alanını açan cihazlarda eşleşmelidir.
+5. Google izin ekranı açılırsa erişimi onaylayın ve uygulamaya dönün. İlk eşitlemenin tamamlanmasını bekleyin. Bir not ve resim ekiyle sonucu her iki cihazda kontrol edin.
+
+Notları göremiyorsanız önce hesabı, sonra alanı ve eşitleme durumunu kontrol edin. Senkron yavaş görünüyorsa gönderen cihazdaki eşitlemenin ve alıcı cihazdaki sonraki kontrolün tamamlanmasını bekleyin. Bir cihazın ana parolasını değiştirmeniz diğer cihazın kilit parolasını değiştirmez.
+
 ## Yedekleme, taşıma ve şifreleme
 
 - **Yedek:** **Ayarlar → Yedek ve aktarım** bölümünden yedek alın veya mevcut bir yedeği geri yükleyin. Resimler de veritabanıyla birlikte saklanır. Aynı bölümden metin notlarını içe aktarabilirsiniz.
@@ -107,6 +140,28 @@ Hello kullanılamadığında veya portable klasörü başka bir bilgisayara taş
 3. Hesap satırındaki koda tıklayıp kopyalayın. **Ctrl+K** paletinde `kod: hesap-adı` ile de bulabilirsiniz. TOTP kodunu telefondaki kodla aynı zaman diliminde karşılaştırın.
 
 Google Authenticator aktarım biçiminin 2. sürümü **v2.1.1** ve sonrasında desteklenir. Doğrulayıcı ayrıca tek hesap için `otpauth://` bağlantısını ve elle TOTP/HOTP girişini destekler. Aktarım QR’ı hesapların gizli anahtarlarını içerir. Gerçek hesaplara ait QR’ları paylaşmayın.
+
+### Android 0.6.0 adayı ile canlı QR ve seçili hesapları dışa aktarma
+
+1. **Doğrulayıcı → QR kodu tara** seçeneğini açın. Android sorarsa kamera izni verin.
+2. QR’ın tamamını kamera çerçevesine alın. Uygulama önizlemeden okuyup hesabı ekler. Google Authenticator birden fazla QR üretirse bütün parçaları sırayla okutun.
+3. Hesap göndermek için **Hesapları QR ile dışa aktar** bölümünden yalnızca taşınacak hesapları seçin. Ana parolanızı girip **Seçilenleri QR olarak göster**’e dokunun.
+4. Hedef Google Authenticator’da **Hesapları aktar → Hesapları içe aktar** ekranından gösterilen QR’ları sırayla tarayın. Uygulamalar arası gerçek içe aktarma testi bu aday için bekliyor.
+
+### Windows 2.6.0 adayı ile hesap tablosu
+
+Tablo hizmeti, hesabı, grubu, kodu ve kalan süreyi ayrı sütunlarda gösterir. Kısayollar Doğrulayıcı penceresi açıkken kullanılır.
+
+| Kısayol | İşlev |
+| --- | --- |
+| Ctrl+N | Hesap ekle |
+| Ctrl+F | Hesap aramasına odaklan |
+| Ctrl+T | Seçili hesabın kodunu kopyala |
+| Ctrl+Shift+T | Seçili hesabın kodunu göster |
+| Enter | Seçili hesabı düzenle |
+| Delete | Seçili hesabı kaldır |
+
+Hesap ekledikten sonra diğer cihazda göründüğünü doğrulayın. Aynı deneme hesabı iki yerde farklı kod gösterirse cihaz saatlerini otomatik ayarlayın ve iki kodu aynı 30 saniyelik aralıkta karşılaştırın. Bu adayların karşılıklı kod eşleşmesi canlı kabul sırasında doğrulanacak.
 
 ## Güncelleme ve sorun giderme
 
